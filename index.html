@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeGenAI - KI-DevOps-Plattform</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if (username === 'Administrator' && password === 'Administrator') {
+                document.getElementById('login-form').style.display = 'none';
+                document.getElementById('hero').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            } else {
+                alert('Falscher Benutzername oder Passwort!');
+            }
+        }
+    </script>
+</head>
+<body>
+<!-- Hero Section -->
+<section id="hero" class="hero">
+    <div class="container">
+        <h1>CodeGenAI</h1>
+        <p>Die vollautomatisierte KI-Plattform für Softwareentwicklung & Migration</p>
+    </div>
+</section>
+
+<div id="login-form" class="login-container">
+    <div class="login-box">
+        <h1>Login</h1>
+        <label for="username">Benutzername:</label>
+        <input type="text" id="username" name="username" placeholder="Benutzername">
+        <label for="password">Passwort:</label>
+        <input type="password" id="password" name="password" placeholder="Passwort">
+        <button id="loginSubmit" onclick="login()">Einloggen</button>
+        <script>
+            var input = document.getElementById("password");
+            input.addEventListener("keypress", function(event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    document.getElementById("loginSubmit").click();
+                }
+            });
+        </script>
+    </div>
+</div>
+
+<div id="main-content" style="display: none;">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Startseite</a></li>
+                <li><a href="#problemDefinition">Problemstellung</a></li>
+                <li><a href="#solutionOverview">Lösungsübersicht</a></li>
+                <li><a href="#benefits">Vorteile</a></li>
+                <li><a href="#risks">Risiken</a></li>
+                <li><a href="#competition">Wettbewerb</a></li>
+                <li><a href="#concept">Konzept</a></li>
+                <li><a href="#visualizations">Visualisierungen</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Willkommen bei CodeGenAI</h1>
+        <p>Die Entwicklung einer KI-gesteuerten DevOps-Plattform zur vollautomatischen Generierung, Migration und Optimierung von Webseiten und Software bietet erhebliche Vorteile und adressiert zentrale Herausforderungen der heutigen Softwareentwicklung.</p>
+    </section>
+
+    <!-- Problemstellung -->
+    <section id="problemDefinition">
+        <section class="container">
+            <h2>Herausforderungen der Softwareentwicklung</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>💰 Hohe Kosten</h3>
+                    <p>60% der IT-Budgets für Wartung alter Systeme (Quelle: Gartner)</p>
+                </div>
+                <div class="card">
+                    <h3>🕰️ Veraltete Systeme</h3>
+                    <p>42% der Unternehmen nutzen Legacy-Code</p>
+                </div>
+                <div class="card">
+                    <h3>👨💻 Fachkräftemangel</h3>
+                    <p>78% der Entwicklerzeit für Wartung statt Innovation</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Lösungsübersicht -->
+    <section id="solutionOverview" class="container">
+        <h2>Unsere Lösung</h2>
+        <div class="architecture">
+            <div>
+                <h3>🛠️ Kernfunktionen</h3>
+                <ul>
+                    <li>Prompt-to-Code Generierung</li>
+                    <li>Automatisierte Legacy-Migration</li>
+                    <li>Echtzeit-Codeanalyse mit SonarQube</li>
+                    <li>Multi-Cloud Deployment</li>
+                </ul>
+            </div>
+            <div>
+                <h3>⚙️ Technische Architektur</h3>
+                <ul>
+                    <li>GPT-4 für NLP-Analyse</li>
+                    <li>Kubernetes Cluster Orchestrierung</li>
+                    <li>React/Node.js Stack</li>
+                    <li>AWS/Azure Integration</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits">
+        <h2>Vorteile</h2>
+        <h3>1. Effizienzsteigerung durch Automatisierung</h3>
+        <p>Die Automatisierung repetitiver Aufgaben durch KI reduziert den manuellen Aufwand erheblich. KI-gestützte Tools können beispielsweise automatisch Code-Snippets oder ganze Funktionen generieren, was die Entwicklungszeit verkürzt. Zudem ermöglicht KI die Automatisierung von Tests und anderen Aufgaben, wodurch das Risiko menschlicher Fehler verringert und eine konsistente Ausführung sichergestellt wird.</p>
+
+        <h3>2. Verbesserung der Codequalität und -sicherheit</h3>
+        <p>KI-gestützte Tools analysieren Code auf Schwachstellen, Fehler und Compliance-Probleme. Sie erkennen Abhängigkeitsprobleme und Schwachstellen von Drittanbietern schneller als herkömmliche Methoden, was zu robusteren und sichereren Anwendungen führt.</p>
+
+        <h3>3. Proaktive Problemerkennung durch prädiktive Analysen</h3>
+        <p>Durch die Analyse historischer und Echtzeitdaten kann KI potenzielle Probleme vorhersagen, bevor sie auftreten. Dies ermöglicht eine frühzeitige Fehlererkennung und -vermeidung, was die Systemstabilität und -verfügbarkeit erhöht.</p>
+    </section>
+
+    <section id="risks">
+        <h2>Potenzielle Risiken bei der Gründung des Startups</h2>
+        <h3>Technische Herausforderungen</h3>
+        <p>Die Implementierung von KI in DevOps-Prozesse kann komplex sein. Ohne ausreichende Expertise besteht das Risiko ineffizienter Lösungen oder Sicherheitslücken.</p>
+
+        <h3>Ressourcenbeschränkungen</h3>
+        <p>Startups verfügen oft über begrenzte finanzielle und personelle Mittel. Die Entwicklung einer solchen Plattform erfordert jedoch erhebliche Investitionen in Technologie und Fachpersonal.</p>
+    </section>
+
+    <section id="competition">
+        <h2>Wettbewerbssituation</h2>
+        <p>Der Markt für KI-gestützte DevOps-Tools ist bereits umkämpft. Etablierte Plattformen wie GitHub, GitLab und Digital.ai bieten umfassende Lösungen für die Softwareentwicklung und das Projektmanagement. Diese Unternehmen verfügen über erhebliche Ressourcen und einen etablierten Kundenstamm, was den Markteintritt für neue Anbieter erschweren kann.</p>
+    </section>
+
+    <section id="concept">
+        <h2>Umfassendes Konzept für eine KI-gesteuerte DevOps-Plattform</h2>
+        <h3>1. Problemstellung</h3>
+        <p>Unternehmen stehen in der Softwareentwicklung vor mehreren Herausforderungen:</p>
+        <ul>
+            <li>Hohe Kosten: Die Entwicklung und Wartung von Software erfordert erhebliche finanzielle Ressourcen.</li>
+            <li>Veraltete Systeme: Viele Unternehmen nutzen Legacy-Systeme, die schwer zu warten und zu aktualisieren sind.</li>
+            <li>Fachkräftemangel: Es besteht ein signifikanter Mangel an qualifizierten IT-Fachkräften, insbesondere in den Bereichen IT-Sicherheit, Softwareentwicklung und Datenanalyse.</li>
+        </ul>
+
+        <h3>2. Lösung: KI-Agenten-Plattform</h3>
+        <p>Die vorgeschlagene KI-Agenten-Plattform bietet zwei Hauptfunktionen:</p>
+
+        <h4>Funktion 1: Prompt-to-Code</h4>
+        <ul>
+            <li><strong>Nutzerinteraktion:</strong> Der Nutzer gibt eine Zielvorgabe ein, beispielsweise "E-Commerce-Shop mit React-Frontend und Node.js-Backend".</li>
+            <li><strong>Task-Generierung:</strong> Die KI analysiert die Vorgabe, identifiziert fehlende Informationen und fordert diese vom Nutzer an. Anschließend werden verschiedene Aufgaben (Tasks) erstellt.</li>
+        </ul>
+
+        <h3>3. Technische Architektur</h3>
+        <ul>
+            <li><strong>Integrationen:</strong> Design-Tools, DevOps, Monitoring</li>
+            <li><strong>KI-Module:</strong> NLP-Modell, Code-Generierung, Predictive Analytics</li>
+        </ul>
+
+        <h3>4. UI/UX-Design</h3>
+        <ul>
+            <li><strong>Design-Inspiration:</strong> Anlehnung an das Design von n8n.io mit dunklem Hintergrund und Neon-Akzenten.</li>
+            <li><strong>Hauptbildschirme:</strong> Dashboard, Workflow-Builder, Live-Preview</li>
+        </ul>
+    </section>
+
+    <section id="visualizations">
+        <h2>Visualisierungen</h2>
+        <ul>
+            <li>Statistiken: Darstellung des Fachkräftemangels im IT-Bereich und der steigenden Nachfrage nach Automatisierungslösungen.</li>
+            <li>Architekturdiagramm: Visualisierung der technischen Architektur der Plattform mit den verschiedenen Integrationen und Modulen.</li>
+            <li>UI/UX-Mockups: Beispielhafte Darstellungen des Dashboards, des Workflow-Builders und der Live-Preview.</li>
+            <li>Roadmap: Zeitstrahl mit den verschiedenen Entwicklungsphasen und Meilensteinen.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CodeGenAI.de. Alle Rechte vorbehalten.</p>
+    </footer>
+</div>
+</body>
+<style>
+    :root {
+        --neon-blue: #00f3ff;
+        --neon-purple: #9d60ff;
+        --dark-bg: #1a1a1a;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Verdana', sans-serif;
+        background: var(--dark-bg);
+        color: white;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 4rem 0;
+        background: linear-gradient(45deg, #1a1a1a 0%, #2d2d2d 100%);
+        border-bottom: 2px solid var(--neon-blue);
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+    }
+
+    .card {
+        padding: 2rem;
+        border: 1px solid #333;
+        border-radius: 8px;
+        transition: transform 0.3s;
+    }
+
+    .architecture {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 4rem 0;
+    }
+
+    .visual-placeholder {
+        background: #2a2a2a;
+        padding: 2rem;
+        border-radius: 8px;
+        text-align: center;
+        margin: 2rem 0;
+    }
+</style>
+</html>
